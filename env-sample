@@ -1,0 +1,10 @@
+MAINNET_RPC=xxxxxxxx
+RINKEBY_RPC=xxxxxxxx
+BSC_RPC_TEST=https://data-seed-prebsc-1-s1.binance.org:8545
+BSC_RPC=https://bsc-dataseed1.binance.org
+PRIVATE_KEY_RINKEBY="0x"
+PRIVATE_KEY_MAINNET="0x"
+PRIVATE_KEY_BSC="0x"
+ETHERSCAN_KEY="xxxxxxxx"
+COINMARKETCAP_API="xxxxxxxxxxxxxxxxxxxxxxxxx"
+BSC_SCAP_API_KEY="xxxxx"
