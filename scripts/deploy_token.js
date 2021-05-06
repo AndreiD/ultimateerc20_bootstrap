@@ -24,7 +24,7 @@ async function main() {
 	await hre.run("compile")
 
 	// We get the contract to deploy
-	const TheToken = await hre.ethers.getContractFactory("TheToken")
+	const TheToken = await hre.ethers.getContractFactory("Links")
 	console.log("Deploying Contract...")
 
 	let network = process.env.NETWORK ? process.env.NETWORK : "rinkeby"
@@ -49,11 +49,11 @@ async function main() {
 
 	let sleepTime = 180000 //3min sleep
 	if (network !== "mainnet") {
-		sleepTime = 30000 // 30 seconds sleep
+		sleepTime = 60000 //1 min sleep
 	}
 	await sleep(sleepTime)
 	await hre.run("verify:verify", {
-		address: dep.address,
+		address: "dep.address",
 		constructorArguments: [],
 	})
 }
