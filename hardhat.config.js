@@ -34,15 +34,15 @@ module.exports = {
 		mainnet: {
 			url: process.env.MAINNET_RPC,
 			gas: 4000000,
-			gasPrice: 45000000000, //45 gwei
-			timeout: 15000,
+			gasPrice: 118000000000, //118 gwei
+			timeout: 65000,
 			accounts: [process.env.PRIVATE_KEY_MAINNET],
 		},
 		rinkeby: {
 			url: process.env.RINKEBY_RPC,
 			network_id: 4,
 			gas: 4000000,
-			gasPrice: 45000000000, //45 gwei
+			gasPrice: 1000000000, //1 gwei
 			timeout: 15000,
 			accounts: [process.env.PRIVATE_KEY_RINKEBY],
 		},
@@ -60,6 +60,20 @@ module.exports = {
 			gasPrice: 5000000000, //5 gwei
 			accounts: [process.env.PRIVATE_KEY_BSC],
 		},
+		matic: {
+			url: process.env.MATIC_RPC,
+			network_id: 137,
+			gas: 4000000,
+			gasPrice: 1000000000, //1 gwei
+			accounts: [process.env.PRIVATE_KEY_MATIC],
+		},
+		matic_test: {
+			url: process.env.MATIC_RPC_TEST,
+			network_id: 80001,
+			gas: 4000000,
+			gasPrice: 1000000000, //1 gwei
+			accounts: [process.env.PRIVATE_KEY_MATIC],
+		},
 	},
 
 	gasReporter: {
@@ -73,6 +87,6 @@ module.exports = {
 		timeout: 20000,
 	},
 	etherscan: {
-		apiKey: process.env.BSC_SCAP_API_KEY, //BSC_SCAP_API_KEY or ETHERSCAN_KEY
+		apiKey: process.env.ETHERSCAN_KEY, //BSC_SCAP_API_KEY or ETHERSCAN_KEY
 	},
 }
