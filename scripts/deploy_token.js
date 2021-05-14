@@ -13,7 +13,7 @@ async function main() {
 	await hre.run("compile")
 
 	// We get the contract to deploy
-	const TheToken = await hre.ethers.getContractFactory("TheToken")
+	const TheToken = await hre.ethers.getContractFactory("Lottery")
 
 	let network = process.env.NETWORK ? process.env.NETWORK : "rinkeby"
 	console.log("Deploying Contract >-> Network is set to " + network)

@@ -6,7 +6,7 @@ require("@nomiclabs/hardhat-etherscan")
 
 module.exports = {
 	solidity: {
-		version: "0.8.3",
+		version: "0.6.12",
 		settings: {
 			optimizer: {
 				enabled: true,
@@ -46,6 +46,14 @@ module.exports = {
 			timeout: 15000,
 			accounts: [process.env.PRIVATE_KEY_RINKEBY],
 		},
+		ropsten: {
+			url: process.env.ROPSTEN_RPC,
+			network_id: 3,
+			gas: 4000000,
+			gasPrice: 10000000000, //10 gwei
+			timeout: 15000,
+			accounts: [process.env.PRIVATE_KEY_ROPSTEN],
+		},
 		bsc_test: {
 			url: process.env.BSC_RPC_TEST,
 			network_id: 97,
@@ -64,14 +72,14 @@ module.exports = {
 			url: process.env.MATIC_RPC,
 			network_id: 137,
 			gas: 4000000,
-			gasPrice: 1000000000, //1 gwei
+			gasPrice: 5,
 			accounts: [process.env.PRIVATE_KEY_MATIC],
 		},
 		matic_test: {
 			url: process.env.MATIC_RPC_TEST,
 			network_id: 80001,
 			gas: 4000000,
-			gasPrice: 1000000000, //1 gwei
+			gasPrice: 5,
 			accounts: [process.env.PRIVATE_KEY_MATIC],
 		},
 	},
