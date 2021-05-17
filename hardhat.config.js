@@ -71,15 +71,17 @@ module.exports = {
 		matic: {
 			url: process.env.MATIC_RPC,
 			network_id: 137,
-			gas: 4000000,
-			gasPrice: 5,
+			gas: 10000000,
+			gasPrice: 1000000000, //1 gwei
+			allowUnlimitedContractSize: true,
 			accounts: [process.env.PRIVATE_KEY_MATIC],
 		},
 		matic_test: {
 			url: process.env.MATIC_RPC_TEST,
 			network_id: 80001,
-			gas: 4000000,
-			gasPrice: 5,
+			gas: 10000000,
+			gasPrice: 1000000000, //1 gwei
+			allowUnlimitedContractSize: true,
 			accounts: [process.env.PRIVATE_KEY_MATIC],
 		},
 	},
